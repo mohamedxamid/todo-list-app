@@ -5,11 +5,11 @@ import "./appHeader.css";
 const AppHeader = ({ liked, posts, name, setModal }) => {
   return (
     <div>
-      <div className="flex justify-between items-end">
-        <div className="relative">
+      <div className="flex justify-between items-end flex-wrap">
+        <div className="flex items-end">
           <h1 className="text-3xl text-zinc-900">{name}</h1>
           <BsFillPencilFill
-            className="absolute top-4 -right-7 cursor-pointer"
+            className="ml-2 cursor-pointer"
             onClick={() => setModal(true)}
           />
         </div>

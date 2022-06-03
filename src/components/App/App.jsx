@@ -5,7 +5,6 @@ import PostList from "../PostList";
 import PostStatusFilter from "../PostStatusFilter";
 import SearchPanel from "../SearchPanel";
 import { v4 } from "uuid";
-import "./app.css";
 
 const App = () => {
   const [data, setData] = useState([
@@ -104,7 +103,7 @@ const App = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-tr to-slate-600 from-slate-900 h-screen pt-20">
+      <div className="bg-gradient-to-tr to-slate-600 from-slate-900 h-screen pt-20 px-2 sm:px-4">
         <div className="bg-slate-500 max-w-4xl mx-auto p-6 rounded">
           <AppHeader
             liked={liked}
@@ -112,7 +111,7 @@ const App = () => {
             name={name}
             setModal={setModal}
           />
-          <div className="flex justify-between my-4 text-xl">
+          <div className="flex justify-between flex-wrap sm:flex-nowrap my-4 text-xl">
             <SearchPanel term={term} setTerm={setTerm} />
             <PostStatusFilter filter={filter} setFilter={setFilter} />
           </div>
@@ -135,7 +134,7 @@ const App = () => {
             }
           }}
         >
-          <div className="bg-slate-400 w-2/4 p-5 rounded">
+          <div className="bg-slate-400 w-3/4 sm:w-2/4 p-5 rounded">
             <input
               type="text"
               className="w-full rounded px-2 py-1 border-2 border-slate-500"
